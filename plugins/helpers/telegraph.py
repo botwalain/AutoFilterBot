@@ -19,7 +19,7 @@ async def mgndipro(client, message):
                 [InlineKeyboardButton("Share Link", url=f"https://telegram.me/share/url?url={link}"),
                  InlineKeyboardButton("Copy Link", url=f"{link}")]
             ])            
-            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @Mrz_bots**", reply_markup=keyboard)
+            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @IBMBotSupport**", reply_markup=keyboard)
         elif message.reply_to_message.video:
             video = message.reply_to_message.video
             if video.file_size > 500 * 1024 * 1024:  # 500 MB
@@ -34,7 +34,7 @@ async def mgndipro(client, message):
                 [InlineKeyboardButton("Share Link", url=f"https://telegram.me/share/url?url={link}"),
                  InlineKeyboardButton("Copy Link", url=f"{link}")]
             ])            
-            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @Mrz_bots**", reply_markup=keyboard)
+            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @IBMBotSupport**", reply_markup=keyboard)
         elif message.reply_to_message.animation:
             animation = message.reply_to_message.animation
             if animation.file_size > 500 * 1024 * 1024:  # 500 MB
@@ -49,7 +49,7 @@ async def mgndipro(client, message):
                 [InlineKeyboardButton("Share Link", url=f"https://telegram.me/share/url?url={link}"),
                  InlineKeyboardButton("Copy Link", url=f"{link}")]
             ])           
-            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @Mrz_bots**", reply_markup=keyboard)
+            await s.edit(f"**Link: {link}**\n\n**Copy link:** `{link}`\n\n>**By: @IBMBotSupport**", reply_markup=keyboard)
         else:
             await message.reply("Please reply to a photo or video or Gif")
     else:
