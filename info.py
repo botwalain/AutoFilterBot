@@ -13,7 +13,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
+SESSION = environ.get('SESSION', 'TechVJBot')
 API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
@@ -21,15 +21,15 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://graph.org/file/5c94a977943ac2b777d93.jpg')).split()
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/b860e8d8a234384950587.jpg")
-WVD = environ.get("WVD", "https://telegra.ph/file/b735f93c8eeef4167c6a1.mp4")
-NO_IMDB = environ.get("NO_IMDB", "https://graph.org/file/5c94a977943ac2b777d93.jpg")
+PICS = (environ.get('PICS', 'https://graph.org/file/d48641a6ff9ea38271f60.jpg')).split()
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/d48641a6ff9ea38271f60.jpg")
+WVD = environ.get("WVD", "https://graph.org/file/d48641a6ff9ea38271f60.jpg")
+NO_IMDB = environ.get("NO_IMDB", "https://graph.org/file/d48641a6ff9ea38271f60.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2125687935').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002093599394').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '2125687935').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
@@ -37,21 +37,21 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "autofilter")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vicky3:2003@cluster0.6yf0tdz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "vicky3")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'ibmbotsupport')
 
 # AI
 HORRI_API_KEY = environ.get('HORRI_API_KEY', 'horridapi_Uwk1YJbLSibv2rf88EBPOQ_free_key') # You can get api key here https://t.me/Mrz_bots/222
-BOT_USERNAME = environ.get('BOT_USERNAME', 'TonyStartkRobot')
+BOT_USERNAME = environ.get('BOT_USERNAME', 'ibm_mov_bot')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'xbotsupports')
-UPDATE_CHANNEL = environ.get('UPDATE_CHANNEL', 'https://t.me/botuptest') # add here your update channel link
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002093599394))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'IBMBotSupport')
+UPDATE_CHANNEL = environ.get('UPDATE_CHANNEL', 'https://t.me/WholesomeCity') # add here your update channel link
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "False")), False)
+AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
@@ -62,7 +62,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002093599394')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
