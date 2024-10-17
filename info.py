@@ -37,8 +37,8 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vicky5:2003@cluster0.djc61.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "vicky5")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vicky3:2003@cluster0.6yf0tdz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "vicky3")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'ibmbotsupport')
 
 # AI
@@ -50,7 +50,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002093599394))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'IBMBotSupport')
 UPDATE_CHANNEL = environ.get('UPDATE_CHANNEL', 'https://t.me/WholesomeCity') # add here your update channel link
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
